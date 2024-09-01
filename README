@@ -1,0 +1,47 @@
+Bitcoin Solo Miner Script
+Overview
+This Bitcoin solo mining script allows individual miners to participate in the Bitcoin network by validating transactions and adding them to the blockchain. The script is designed to be user-friendly and includes a unique feature that splits the Coinbase transaction, enabling the miner to send mining rewards to two different Bitcoin addresses.
+
+Key Features
+Solo Mining: Mine Bitcoin independently without relying on a mining pool.
+Coinbase Transaction Splitting: The script splits the Coinbase transaction, allowing rewards to be sent to two separate wallet addresses.
+Customizable Payouts: Enter a secondary wallet address directly in the terminal to allocate a portion of the mining rewards.
+Efficiency: Optimized for maximum efficiency and performance on a variety of hardware setups.
+Installation
+Prerequisites
+Python 3.x: Ensure that Python 3.x is installed on your system.
+Bitcoin Core: The script requires a fully synced Bitcoin Core node for solo mining.
+Setup
+Download the Scripts: Save miner.py and miner2.py to your preferred directory.
+Install Required Python Libraries: Run the following command to install any necessary libraries:
+bash
+Copy code
+pip install -r requirements.txt
+Usage
+Start the Bitcoin Core Node: Make sure your Bitcoin Core node is fully synced and running.
+
+Run the Miner Script: Navigate to the directory containing miner.py or miner2.py and run the script:
+
+bash
+Copy code
+python miner.py
+Input Wallet Addresses:
+
+Primary Wallet: The script will use a hard-coded primary wallet address.
+Secondary Wallet: When prompted in the terminal, enter the second wallet address where you would like a portion of the mining rewards to be sent.
+Mining Operations: The script will begin the mining process, validating transactions and attempting to solve the cryptographic puzzle to add a new block to the blockchain.
+
+Example
+bash
+Copy code
+python miner.py
+Enter the second wallet address for Coinbase splitting: 1YourSecondWalletAddressHere
+How It Works
+The script starts by establishing a connection with the Bitcoin Core node to retrieve the current block header and difficulty. It then begins hashing to find a valid nonce that solves the cryptographic puzzle.
+
+Coinbase Transaction Splitting
+The miner script includes a feature to split the Coinbase transaction. The Coinbase transaction is the first transaction in a block and is the transaction that grants the mining reward to the miner. With this script, miners can split the reward between two Bitcoin addresses:
+
+Primary Address: A hard-coded address in the script.
+Secondary Address: User-defined, entered in the terminal when prompted.
+By splitting the Coinbase transaction, miners have flexibility in distributing their rewards, allowing them to support multiple wallets.
